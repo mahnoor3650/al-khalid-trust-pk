@@ -32,7 +32,7 @@ const Footer = () => {
               <h4 className="text-white text-lg font-semibold mb-6">Contact Info</h4>
               <ul className="space-y-3 text-gray-300">
                 <li>
-                  <p>Address: Shop no 1, Street no 2, Railway Scheme no 7, Railway Workshop Road, Rawalpindi</p>
+                  <p>Address: Shop no 8, Railway Scheme no 7, Railway Workshop Road, Rawalpindi</p>
                 </li>
                 <li>
                   <Link to="/contact" className="hover:text-theme-primary transition">Phone: 0333-5702440</Link>
@@ -41,6 +41,33 @@ const Footer = () => {
                   <Link to="/contact" className="hover:text-theme-primary transition">Email: khalidhashmi7640@gmail.com</Link>
                 </li>
               </ul>
+            </div>
+
+            {/* Donation Info */}
+            <div>
+              <h4 className="text-white text-lg font-semibold mb-6">Donation Info</h4>
+              <div className="space-y-4 text-gray-300">
+                <div>
+                  <p className="font-semibold text-white mb-2">Bank Account</p>
+                  <ul className="space-y-1 text-sm">
+                    <li>Account: Khalid Nazir Hashmi</li>
+                    <li className="font-mono text-xs break-all">07550010047935840026</li>
+                    <li>Allied Bank Limited</li>
+                  </ul>
+                </div>
+                <div>
+                  <p className="font-semibold text-white mb-2">EasyPaisa</p>
+                  <ul className="space-y-1 text-sm">
+                    <li>Account: Khalid Nazir Hashmi</li>
+                    <li className="font-mono">03335702440</li>
+                  </ul>
+                </div>
+                <div>
+                  <Link to="/contact" className="text-theme-primary hover:underline text-sm">
+                    View More Details →
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* Important Links */}
