@@ -175,17 +175,54 @@ const Header = () => {
               </button>
             </div>
 
-            {/* Mobile Menu */}
-            {isMenuOpen && (
-              <div className="lg:hidden mt-4 pb-4">
-                <ul className="flex flex-col gap-4">
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu Drawer */}
+      {isMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/50 z-[60] lg:hidden transition-opacity duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          ></div>
+          
+          {/* Drawer */}
+          <div className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-[70] lg:hidden drawer-slide-in">
+            <div className="flex flex-col h-full">
+              {/* Drawer Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                <div className="flex items-center gap-3">
+                  <img
+                    src={logoImage}
+                    alt="Al-Khalid Trust Pakistan"
+                    className="h-10 w-auto"
+                  />
+                  <span className="text-lg font-bold text-heading">
+                    Al-Khalid Trust Pakistan
+                  </span>
+                </div>
+                <button
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-gray-700 hover:text-theme-primary transition p-2"
+                  aria-label="Close menu"
+                >
+                  <i className="fas fa-times text-2xl"></i>
+                </button>
+              </div>
+
+              {/* Drawer Menu */}
+              <nav className="flex-1 overflow-y-auto p-6">
+                <ul className="flex flex-col gap-2">
                   <li>
                     <Link
                       to="/"
-                      className={`block transition font-medium ${
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block py-3 px-4 rounded-lg transition font-medium ${
                         isActive('/')
-                          ? 'text-theme-primary'
-                          : 'text-gray-700 hover:text-theme-primary'
+                          ? 'text-theme-primary bg-theme-primary/10'
+                          : 'text-gray-700 hover:text-theme-primary hover:bg-gray-50'
                       }`}
                     >
                       Home
@@ -194,10 +231,11 @@ const Header = () => {
                   <li>
                     <Link
                       to="/about"
-                      className={`block transition font-medium ${
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block py-3 px-4 rounded-lg transition font-medium ${
                         isActive('/about')
-                          ? 'text-theme-primary'
-                          : 'text-gray-700 hover:text-theme-primary'
+                          ? 'text-theme-primary bg-theme-primary/10'
+                          : 'text-gray-700 hover:text-theme-primary hover:bg-gray-50'
                       }`}
                     >
                       About
@@ -206,10 +244,11 @@ const Header = () => {
                   <li>
                     <Link
                       to="/programs"
-                      className={`block transition font-medium ${
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block py-3 px-4 rounded-lg transition font-medium ${
                         isActive('/programs')
-                          ? 'text-theme-primary'
-                          : 'text-gray-700 hover:text-theme-primary'
+                          ? 'text-theme-primary bg-theme-primary/10'
+                          : 'text-gray-700 hover:text-theme-primary hover:bg-gray-50'
                       }`}
                     >
                       Our Programs
@@ -218,10 +257,11 @@ const Header = () => {
                   <li>
                     <Link
                       to="/ramzan"
-                      className={`block transition font-medium ${
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block py-3 px-4 rounded-lg transition font-medium ${
                         isActive('/ramzan')
-                          ? 'text-theme-primary'
-                          : 'text-gray-700 hover:text-theme-primary'
+                          ? 'text-theme-primary bg-theme-primary/10'
+                          : 'text-gray-700 hover:text-theme-primary hover:bg-gray-50'
                       }`}
                     >
                       Ramzan
@@ -230,10 +270,11 @@ const Header = () => {
                   <li>
                     <Link
                       to="/gallery"
-                      className={`block transition font-medium ${
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block py-3 px-4 rounded-lg transition font-medium ${
                         isActive('/gallery')
-                          ? 'text-theme-primary'
-                          : 'text-gray-700 hover:text-theme-primary'
+                          ? 'text-theme-primary bg-theme-primary/10'
+                          : 'text-gray-700 hover:text-theme-primary hover:bg-gray-50'
                       }`}
                     >
                       Gallery
@@ -242,29 +283,51 @@ const Header = () => {
                   <li>
                     <Link
                       to="/contact"
-                      className={`block transition font-medium ${
+                      onClick={() => setIsMenuOpen(false)}
+                      className={`block py-3 px-4 rounded-lg transition font-medium ${
                         isActive('/contact')
-                          ? 'text-theme-primary'
-                          : 'text-gray-700 hover:text-theme-primary'
+                          ? 'text-theme-primary bg-theme-primary/10'
+                          : 'text-gray-700 hover:text-theme-primary hover:bg-gray-50'
                       }`}
                     >
                       Contact & Donate
                     </Link>
                   </li>
-                  <li>
+                  <li className="mt-4">
                     <Link
                       to="/contact"
-                      className="btn btn-primary w-full text-center"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="btn btn-primary w-full text-center block"
                     >
                       Donate
                     </Link>
                   </li>
                 </ul>
+              </nav>
+
+              {/* Drawer Footer */}
+              <div className="p-6 border-t border-gray-200">
+                <div className="flex flex-col gap-3 text-sm text-gray-600">
+                  <a
+                    href="tel:+923335702440"
+                    className="flex items-center gap-2 hover:text-theme-primary transition"
+                  >
+                    <i className="fas fa-phone"></i>
+                    <span>0333-5702440</span>
+                  </a>
+                  <a
+                    href="mailto:khalidhashmi7640@gmail.com"
+                    className="flex items-center gap-2 hover:text-theme-primary transition"
+                  >
+                    <i className="fas fa-envelope"></i>
+                    <span>khalidhashmi7640@gmail.com</span>
+                  </a>
+                </div>
               </div>
-            )}
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
     </header>
   );
 };

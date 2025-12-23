@@ -147,4 +147,18 @@
   .animate-fade-in {
     animation: fadeIn 0.3s ease-out;
   }
+  
+  /* Drawer slide-in animation */
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .drawer-slide-in {
+    animation: slideInRight 0.3s ease-out;
+  }
 }

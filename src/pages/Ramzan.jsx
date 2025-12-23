@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const Ramzan = () => {
   return (
     <main>
+      <SEO
+        title="Ramzan Initiatives | Al-Khalid Trust Pakistan"
+        description="Al-Khalid Trust Pakistan's Ramzan programs: Rashan packages and Iftar dinners for fasting families. Supporting communities during the holy month of Ramadan."
+        keywords="Ramzan, Ramadan, Rashan, Iftar, food distribution, holy month, charity, Pakistan"
+      />
       {/* Hero Banner */}
       <section
         className="slider-area2 relative h-[400px] bg-cover bg-center bg-no-repeat"

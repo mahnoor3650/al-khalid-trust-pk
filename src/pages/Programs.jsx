@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
 import programsData from '../data/programs.json';
+import SEO from '../components/SEO';
 
 const Programs = () => {
   return (
     <main>
+      <SEO
+        title="Our Programs | Al-Khalid Trust Pakistan"
+        description="Explore Al-Khalid Trust Pakistan's welfare programs: food distribution, monthly grocery support, business setup for widows, water bore drilling, and Ramzan initiatives."
+        keywords="programs, food distribution, monthly grocery, business setup, water projects, Ramzan, welfare programs, charity"
+      />
       {/* Hero Banner */}
       <section
         className="slider-area2 relative h-[400px] bg-cover bg-center bg-no-repeat"

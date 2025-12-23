@@ -9,8 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "generate-gallery": "node scripts/generate-gallery-manifest.js",
-    "predev": "npm run generate-gallery",
-    "prebuild": "npm run generate-gallery"
+    "generate-seo": "node scripts/generate-seo-files.js",
+    "predev": "npm run generate-gallery && npm run generate-seo",
+    "prebuild": "npm run generate-gallery && npm run generate-seo"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",

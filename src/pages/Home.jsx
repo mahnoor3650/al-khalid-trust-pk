@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
 import { FaPhone, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 const Home = () => {
   return (
     <main>
+      <SEO
+        title="Al-Khalid Trust Pakistan | Supporting Poor, Needy & Widows"
+        description="Al-Khalid Trust Pakistan - Established 20 March 2020. Supporting poor, needy individuals and widows through food distribution, monthly grocery support, business setup, and water projects in Rawalpindi, Pakistan."
+        keywords="Al-Khalid Trust Pakistan, charity, welfare, food distribution, Ramzan, donation, Rawalpindi, Pakistan, poor support, widows support, water projects, business setup"
+      />
       {/* Hero Slider */}
       <section
         className="slider-area relative h-[600px] lg:h-[700px] bg-cover bg-center bg-no-repeat"

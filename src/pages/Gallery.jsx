@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import SEO from '../components/SEO';
 
 // Video Thumbnail Component - Shows video first frame as thumbnail
 const VideoThumbnail = ({ src, alt }) => {
@@ -100,6 +101,11 @@ const Gallery = () => {
 
   return (
     <main>
+      <SEO
+        title="Gallery | Al-Khalid Trust Pakistan"
+        description="View photos and videos from Al-Khalid Trust Pakistan's welfare activities, food distribution programs, community support initiatives, and Ramzan activities."
+        keywords="gallery, photos, videos, activities, food distribution, Ramzan, community support, charity work"
+      />
       {/* Hero Banner */}
       <section
         className="slider-area2 relative h-[400px] bg-cover bg-center bg-no-repeat"

@@ -1,6 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import programsData from '../data/programs.json';
+import SEO from '../components/SEO';
 
 const ProgramDetails = () => {
   const { slug } = useParams();
@@ -37,6 +38,11 @@ const ProgramDetails = () => {
 
   return (
     <main>
+      <SEO
+        title={`${program.title} | Al-Khalid Trust Pakistan`}
+        description={program.shortDescription || program.fullDescription.substring(0, 160)}
+        keywords={`${program.title}, ${program.shortTitle}, welfare program, charity, Al-Khalid Trust Pakistan`}
+      />
       {/* Hero Banner */}
       <section
         className="slider-area2 relative h-[400px] bg-cover bg-center bg-no-repeat"

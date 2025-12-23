@@ -1,8 +1,14 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const About = () => {
   return (
     <main>
+      <SEO
+        title="About Us | Al-Khalid Trust Pakistan"
+        description="Learn about Al-Khalid Trust Pakistan, founded by Khalid Nazir Hashmi on 20 March 2020. Our vision, mission, and commitment to supporting poor, needy individuals and widows in Pakistan."
+        keywords="Al-Khalid Trust Pakistan, about us, founder, Khalid Nazir Hashmi, charity organization, welfare trust, Pakistan"
+      />
       {/* Hero Banner */}
       <section
         className="slider-area2 relative h-[400px] bg-cover bg-center bg-no-repeat"
