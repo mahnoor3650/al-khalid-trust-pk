@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme {
+  /* Theme colors */
+  --color-theme-primary: #09cc7f;
+  --color-theme-secondary: #1f2b7b;
+  --color-theme-tertiary: #f27420;
+  --color-theme-quaternary: #ff3500;
+  
+  /* Heading colors */
+  --color-heading: #072366;
+  --color-heading-secondary: #080808;
+  
+  /* Body text colors */
+  --color-body: #6b7894;
+  --color-body-dark: #10285d;
+}
+
+@layer base {
+  body {
+    color: #6b7894;
+    background-color: white;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #072366;
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .text-theme-primary {
+    color: var(--color-theme-primary);
+  }
+  
+  .bg-theme-primary {
+    background-color: var(--color-theme-primary);
+  }
+  
+  .text-theme-secondary {
+    color: var(--color-theme-secondary);
+  }
+  
+  .bg-theme-secondary {
+    background-color: var(--color-theme-secondary);
+  }
+  
+  .text-heading {
+    color: var(--color-heading);
+  }
+  
+  .text-body {
+    color: var(--color-body);
+  }
+    .text-body-dark {
+      color: var(--color-body-dark);
+    }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-block text-center;
+  }
+  
+  .btn-primary {
+    background-color: var(--color-theme-primary);
+    @apply text-white;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+  
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-secondary {
+    background-color: var(--color-theme-secondary);
+    @apply text-white;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+  
+  .btn-secondary:hover {
+    opacity: 0.9;
+  }
+  
+  .section-padding {
+    @apply py-20 lg:py-24;
+  }
+  
+  .section-padding30 {
+    @apply py-16 lg:py-20;
+  }
+  
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Gallery Masonry Layout */
+  .gallery-masonry {
+    column-width: 280px;
+    column-gap: 20px;
+    column-fill: balance;
+  }
+  
+  .gallery-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  /* Responsive column counts */
+  @media (max-width: 639px) {
+    .gallery-masonry {
+      column-count: 1;
+    }
+  }
+  
+  @media (min-width: 640px) and (max-width: 767px) {
+    .gallery-masonry {
+      column-count: 2;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .gallery-masonry {
+      column-count: 3;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .gallery-masonry {
+      column-count: 4;
+    }
+  }
+  
+  /* Copy animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+}

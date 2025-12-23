@@ -1,0 +1,175 @@
+[
+  {
+    "id": "food-distribution",
+    "title": "Food Distribution for Poor & Needy",
+    "shortTitle": "Food Distribution",
+    "icon": "fas fa-utensils",
+    "slug": "food-distribution",
+    "description": "Providing essential food items to underprivileged families and individuals in need, ensuring no one goes hungry in our communities.",
+    "fullDescription": "Our Food Distribution program is one of the core initiatives of Al-Khalid Trust, designed to address immediate hunger and food insecurity in vulnerable communities. We conduct regular food distribution drives every Monday and Thursday at noon, providing freshly prepared meals and essential food items to those in need. Each distribution session serves approximately 500 people, ensuring that individuals and families receive nutritious meals and basic food supplies including rice, flour, cooking oil, pulses, and other essential necessities.",
+    "details": [
+      "Regular food distribution held every Monday and Thursday at noon",
+      "Each session serves approximately 500 people",
+      "Freshly prepared meals and essential food items provided",
+      "Essential supplies including rice, flour, cooking oil, pulses, and basic necessities",
+      "Targeted distribution to underprivileged families and individuals",
+      "Community-based approach ensuring maximum reach and accessibility",
+      "Transparent distribution process with proper documentation and record-keeping"
+    ],
+    "impact": {
+      "peopleServed": "500 people per session",
+      "label": "People Served Per Session"
+    },
+    "images": [
+      "/assets/img/gallery/f1.jfif",
+      "/assets/img/gallery/f2.jfif",
+      "/assets/img/gallery/f3.jfif",
+      "/assets/img/gallery/f4.jfif"
+    ],
+    "mainImage": "/assets/img/gallery/case11.jpeg"
+  },
+  {
+    "id": "monthly-grocery",
+    "title": "Monthly Grocery Support",
+    "shortTitle": "Monthly Grocery",
+    "icon": "fas fa-shopping-basket",
+    "slug": "monthly-grocery",
+    "description": "Regular monthly grocery packages for struggling families, helping them meet their basic nutritional needs with dignity.",
+    "fullDescription": "The Monthly Grocery Support program provides consistent financial assistance and comprehensive grocery packages to deserving families throughout the year. We have successfully supported more than 100 households with regular monthly grocery deliveries, ensuring they have access to all essential food items needed for complete nutrition. Each package is carefully curated to include rice, flour, cooking oil, pulses, spices, and other daily necessities, allowing families to maintain their dignity while meeting their nutritional requirements without financial burden.",
+    "details": [
+      "Monthly grocery packages delivered to registered families",
+      "More than 100 households financially supported",
+      "Comprehensive food items for complete nutrition",
+      "Long-term consistent support for struggling families",
+      "Dignified distribution process maintaining respect and privacy",
+      "Regular monitoring and assessment of beneficiaries",
+      "Financial assistance for families unable to afford basic groceries"
+    ],
+    "impact": {
+      "householdsSupported": "More than 100 households",
+      "label": "Households Financially Supported"
+    },
+    "images": [
+      "/assets/img/gallery/case21.jpeg",
+      "/assets/img/gallery/r2.jfif",
+      "/assets/img/gallery/r3.jfif",
+      "/assets/img/gallery/r4.jfif"
+    ],
+    "mainImage": "/assets/img/gallery/case22.jpeg"
+  },
+  {
+    "id": "business-setup",
+    "title": "Small Business Setup for Poor & Widows",
+    "shortTitle": "Business Setup",
+    "icon": "fas fa-briefcase",
+    "slug": "business-setup",
+    "description": "Empowering poor individuals and widows through small business setup programs, enabling them to earn a dignified livelihood.",
+    "fullDescription": "Our Small Business Setup program focuses on empowering individuals, particularly widows and those from economically disadvantaged backgrounds, by providing them with the necessary resources, financial assistance, and support to establish their own small businesses. Through this initiative, we have successfully established more than 50 small businesses for needy individuals, creating sustainable income opportunities that enable beneficiaries to become self-reliant and financially independent. This program goes beyond immediate relief, fostering long-term economic empowerment and self-sufficiency.",
+    "details": [
+      "More than 50 small businesses established for needy individuals",
+      "Financial assistance and grants for business setup",
+      "Training and mentorship programs for business development",
+      "Priority support for widows and single mothers",
+      "Small business loans with flexible repayment terms",
+      "Ongoing support and guidance for business growth and sustainability",
+      "Business planning and market analysis assistance"
+    ],
+    "impact": {
+      "businessesEstablished": "More than 50 small businesses",
+      "label": "Small Businesses Established"
+    },
+    "images": [
+      "/assets/img/gallery/b1.jfif",
+      "/assets/img/gallery/b2.jfif",
+       "/assets/img/gallery/m3.jfif"
+    ],
+    "mainImage": "/assets/img/gallery/m3.jfif"
+  },
+  {
+    "id": "water-bore",
+    "title": "Water Bore Drilling in Water-Scarce Areas",
+    "shortTitle": "Water Bore Drilling",
+    "icon": "fas fa-tint",
+    "slug": "water-bore",
+    "description": "Addressing water scarcity by arranging bore drilling in areas lacking access to clean water, ensuring communities have safe drinking water.",
+    "fullDescription": "Access to clean water is a fundamental human right. Our Water Bore Drilling program addresses the critical issue of water scarcity in various communities across Pakistan. We have successfully completed more than 10 water bore drilling projects in areas where access to clean drinking water was limited or non-existent. These projects provide communities with a sustainable source of clean water, significantly improving their quality of life, health outcomes, and reducing the burden of water collection, especially for women and children.",
+    "details": [
+      "More than 10 water bore drilling projects completed",
+      "Identification and assessment of water-scarce areas",
+      "Professional bore drilling services with quality assurance",
+      "Water quality testing and treatment facilities",
+      "Community water access points for easy distribution",
+      "Long-term maintenance and support for sustainability",
+      "Training community members on water management"
+    ],
+    "impact": {
+      "boresCompleted": "More than 10 water bores",
+      "label": "Water Bores Completed"
+    },
+    "images": [
+      "/assets/img/gallery/case44.jfif",
+      "/assets/img/gallery/bo1.jfif",
+      "/assets/img/gallery/bo2.jfif",
+      "/assets/img/gallery/bo3.jfif"
+    ],
+    "mainImage": "/assets/img/gallery/case44.jfif"
+  },
+  {
+    "id": "ramzan-rashan",
+    "title": "Ramzan Rashan Package",
+    "shortTitle": "Ramzan Rashan",
+    "icon": "fas fa-box",
+    "slug": "ramzan-rashan",
+    "description": "Special Ramzan food packages containing essential items for families to observe the holy month with dignity and ease.",
+    "fullDescription": "Each year during the holy month of Ramzan, Al-Khalid Trust organizes special Rashan (grocery) packages for families in need. These comprehensive packages contain all essential food items required for the entire month, including dates, rice, flour, cooking oil, pulses, sugar, tea, spices, and other daily necessities. We have successfully distributed these packages to more than 300 families annually, ensuring they can observe Ramzan with dignity and focus on their spiritual practices without worrying about their daily meals. The distribution takes place before Ramzan begins, allowing families to prepare adequately for the blessed month.",
+    "details": [
+      "Annual Ramzan Rashan distribution to more than 300 families",
+      "Comprehensive packages with all essential food items",
+      "Includes dates, rice, flour, cooking oil, pulses, sugar, tea, and spices",
+      "Distribution before Ramzan begins for proper preparation",
+      "Targeted support for needy and deserving families",
+      "Dignified and respectful distribution process",
+      "Community-wide impact ensuring no family goes hungry during Ramzan"
+    ],
+    "impact": {
+      "familiesServed": "More than 300 families annually",
+      "label": "Families Served Each Year"
+    },
+    "images": [
+    "/assets/img/gallery/case6-1.jfif",
+      "/assets/img/gallery/ram1.jfif",
+      "/assets/img/gallery/ram2.jfif",
+      "/assets/img/gallery/ram3.jfif"
+    ],
+    "mainImage": "/assets/img/gallery/case555.jfif"
+  },
+  {
+    "id": "iftar-dinners",
+    "title": "Iftar Dinners During Ramzan",
+    "shortTitle": "Iftar Dinners",
+    "icon": "fas fa-moon",
+    "slug": "iftar-dinners",
+    "description": "Organizing community iftar dinners throughout Ramzan, bringing together families and individuals to break their fast together.",
+    "fullDescription": "Our Iftar Dinners program brings communities together during the blessed month of Ramzan. Each day throughout the holy month, we organize and distribute iftar dinners at our designated locations. People from all walks of life are welcome to come and break their fast with nutritious, balanced meals prepared with care. These daily community gatherings not only provide essential nutrition for those fasting but also foster a sense of unity, brotherhood, and shared spiritual experience among community members. The program creates an inclusive environment where everyone can participate in the blessings of Ramzan together.",
+    "details": [
+      "Daily iftar dinners organized throughout the entire month of Ramzan",
+      "Open to all community members to come and break their fast",
+      "Nutritious and balanced meals prepared daily",
+      "Community gathering fostering unity and brotherhood",
+      "Multiple locations for maximum accessibility",
+      "Volunteer-driven organization ensuring smooth operations",
+      "Inclusive environment welcoming everyone to participate"
+    ],
+    "impact": {
+      "dailyService": "Daily iftar dinners throughout Ramzan",
+      "label": "Daily Iftar Service"
+    },
+    "images": [
+    "/assets/img/gallery/case66.jfif",
+      "/assets/img/gallery/if1.jfif",
+      "/assets/img/gallery/if2.jfif",
+      "/assets/img/gallery/if3.jfif"
+    ],
+    "mainImage": "/assets/img/gallery/case66.jfif"
+  }
+]
