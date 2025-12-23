@@ -92,11 +92,9 @@ const ProgramDetails = () => {
                 </h3>
                 <ul className="space-y-3">
                   {program.details.map((detail, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="mt-1 shrink-0">
-                        <i className="fas fa-check-circle text-theme-primary text-xl"></i>
-                      </div>
-                      <p className="text-body text-lg">{detail}</p>
+                    <li key={index} className="flex items-center gap-3">
+                      <i className="fas fa-check-circle text-theme-primary text-xl shrink-0"></i>
+                      <span className="text-body text-lg">{detail}</span>
                     </li>
                   ))}
                 </ul>
