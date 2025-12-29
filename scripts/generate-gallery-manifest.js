@@ -34,14 +34,37 @@ function generateManifest() {
     const ext = path.extname(file).toLowerCase();
     const isImage = imageExtensions.includes(ext);
     const isVideo = videoExtensions.includes(ext);
+    const filePath = path.join(galleryFolder, file);
+    
+    // Get file modification date (when file was last modified/added)
+    let dateAdded = new Date().toISOString();
+    try {
+      const stats = fs.statSync(filePath);
+      dateAdded = stats.mtime.toISOString(); // Use modification time
+    } catch (error) {
+      console.warn(`Could not get stats for ${file}:`, error.message);
+    }
     
     return {
       id: index + 1,
       type: isImage ? 'image' : isVideo ? 'video' : 'unknown',
       src: `/assets/img/image-gallery/${file}`,
       alt: file.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' '),
-      category: 'gallery'
+      category: 'gallery',
+      dateAdded: dateAdded
     };
+  });
+
+  // Sort by date (newest first - most recent modification date first)
+  galleryItems.sort((a, b) => {
+    const dateA = new Date(a.dateAdded);
+    const dateB = new Date(b.dateAdded);
+    return dateB - dateA; // Descending order (newest first)
+  });
+
+  // Update IDs after sorting
+  galleryItems.forEach((item, index) => {
+    item.id = index + 1;
   });
 
   const manifest = {

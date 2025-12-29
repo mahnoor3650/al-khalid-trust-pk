@@ -71,7 +71,16 @@ const Gallery = () => {
         const response = await fetch('/gallery-manifest.json');
         if (response.ok) {
           const manifest = await response.json();
-          setGalleryItems(manifest.items || []);
+          let items = manifest.items || [];
+          
+          // Sort by date (newest first) - fallback in case manifest wasn't sorted
+          items.sort((a, b) => {
+            const dateA = a.dateAdded ? new Date(a.dateAdded) : new Date(0);
+            const dateB = b.dateAdded ? new Date(b.dateAdded) : new Date(0);
+            return dateB - dateA; // Descending order (newest first)
+          });
+          
+          setGalleryItems(items);
         } else {
           console.warn('Gallery manifest not found. Run: npm run generate-gallery');
           setGalleryItems([]);

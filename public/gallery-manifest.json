@@ -1,351 +1,480 @@
 {
-  "lastUpdated": "2025-12-23T17:57:49.393Z",
-  "totalItems": 49,
+  "lastUpdated": "2025-12-29T03:50:58.804Z",
+  "totalItems": 59,
   "images": 18,
-  "videos": 31,
+  "videos": 41,
   "items": [
     {
       "id": 1,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0001.jpg",
-      "alt": "IMG 20251221 WA0001",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0008.mp4",
+      "alt": "VID 20251225 WA0008",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:39:24.305Z"
     },
     {
       "id": 2,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0006.jpg",
-      "alt": "IMG 20251221 WA0006",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0009.mp4",
+      "alt": "VID 20251225 WA0009",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:36:01.916Z"
     },
     {
       "id": 3,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0007.jpg",
-      "alt": "IMG 20251221 WA0007",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0010.mp4",
+      "alt": "VID 20251225 WA0010",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:34:41.041Z"
     },
     {
       "id": 4,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0008.jpg",
-      "alt": "IMG 20251221 WA0008",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0011.mp4",
+      "alt": "VID 20251225 WA0011",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:33:05.131Z"
     },
     {
       "id": 5,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0009.jpg",
-      "alt": "IMG 20251221 WA0009",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0012.mp4",
+      "alt": "VID 20251225 WA0012",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:31:26.292Z"
     },
     {
       "id": 6,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0010.jpg",
-      "alt": "IMG 20251221 WA0010",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0013.mp4",
+      "alt": "VID 20251225 WA0013",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:29:36.433Z"
     },
     {
       "id": 7,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0011.jpg",
-      "alt": "IMG 20251221 WA0011",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0014.mp4",
+      "alt": "VID 20251225 WA0014",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:27:52.776Z"
     },
     {
       "id": 8,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0025.jpg",
-      "alt": "IMG 20251221 WA0025",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0015.mp4",
+      "alt": "VID 20251225 WA0015",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:26:00.408Z"
     },
     {
       "id": 9,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0041.jpg",
-      "alt": "IMG 20251221 WA0041",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0017.mp4",
+      "alt": "VID 20251225 WA0017",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:24:24.389Z"
     },
     {
       "id": 10,
-      "type": "image",
-      "src": "/assets/img/image-gallery/IMG-20251221-WA0042.jpg",
-      "alt": "IMG 20251221 WA0042",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251225-WA0018.mp4",
+      "alt": "VID 20251225 WA0018",
+      "category": "gallery",
+      "dateAdded": "2025-12-29T03:23:09.859Z"
     },
     {
       "id": 11,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0000.mp4",
-      "alt": "VID 20251221 WA0000",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0027.mp4",
+      "alt": "VID 20251221 WA0027",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:29.000Z"
     },
     {
       "id": 12,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0002.mp4",
-      "alt": "VID 20251221 WA0002",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0028.mp4",
+      "alt": "VID 20251221 WA0028",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:29.000Z"
     },
     {
       "id": 13,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0003.mp4",
-      "alt": "VID 20251221 WA0003",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0029.mp4",
+      "alt": "VID 20251221 WA0029",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:29.000Z"
     },
     {
       "id": 14,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0004.mp4",
-      "alt": "VID 20251221 WA0004",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0030.mp4",
+      "alt": "VID 20251221 WA0030",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:29.000Z"
     },
     {
       "id": 15,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0005.mp4",
-      "alt": "VID 20251221 WA0005",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0031.mp4",
+      "alt": "VID 20251221 WA0031",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:28.000Z"
     },
     {
       "id": 16,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0013.mp4",
-      "alt": "VID 20251221 WA0013",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0032.mp4",
+      "alt": "VID 20251221 WA0032",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:28.000Z"
     },
     {
       "id": 17,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0014.mp4",
-      "alt": "VID 20251221 WA0014",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0033.mp4",
+      "alt": "VID 20251221 WA0033",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:28.000Z"
     },
     {
       "id": 18,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0015.mp4",
-      "alt": "VID 20251221 WA0015",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0034.mp4",
+      "alt": "VID 20251221 WA0034",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:28.000Z"
     },
     {
       "id": 19,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0016.mp4",
-      "alt": "VID 20251221 WA0016",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0035.mp4",
+      "alt": "VID 20251221 WA0035",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:28.000Z"
     },
     {
       "id": 20,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0017.mp4",
-      "alt": "VID 20251221 WA0017",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0036.mp4",
+      "alt": "VID 20251221 WA0036",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:28.000Z"
     },
     {
       "id": 21,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0018.mp4",
-      "alt": "VID 20251221 WA0018",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0041.jpg",
+      "alt": "IMG 20251221 WA0041",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:27.000Z"
     },
     {
       "id": 22,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0019.mp4",
-      "alt": "VID 20251221 WA0019",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0042.jpg",
+      "alt": "IMG 20251221 WA0042",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:27.000Z"
     },
     {
       "id": 23,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0020.mp4",
-      "alt": "VID 20251221 WA0020",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0037.mp4",
+      "alt": "VID 20251221 WA0037",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:27.000Z"
     },
     {
       "id": 24,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0021.mp4",
-      "alt": "VID 20251221 WA0021",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0038.mp4",
+      "alt": "VID 20251221 WA0038",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:27.000Z"
     },
     {
       "id": 25,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0022.mp4",
-      "alt": "VID 20251221 WA0022",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0039.mp4",
+      "alt": "VID 20251221 WA0039",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:27.000Z"
     },
     {
       "id": 26,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0023.mp4",
-      "alt": "VID 20251221 WA0023",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0040.mp4",
+      "alt": "VID 20251221 WA0040",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:27.000Z"
     },
     {
       "id": 27,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0024.mp4",
-      "alt": "VID 20251221 WA0024",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0001.jpg",
+      "alt": "IMG 20251221 WA0001",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 28,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0027.mp4",
-      "alt": "VID 20251221 WA0027",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0006.jpg",
+      "alt": "IMG 20251221 WA0006",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 29,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0028.mp4",
-      "alt": "VID 20251221 WA0028",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0007.jpg",
+      "alt": "IMG 20251221 WA0007",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 30,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0029.mp4",
-      "alt": "VID 20251221 WA0029",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0008.jpg",
+      "alt": "IMG 20251221 WA0008",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 31,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0030.mp4",
-      "alt": "VID 20251221 WA0030",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0009.jpg",
+      "alt": "IMG 20251221 WA0009",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 32,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0031.mp4",
-      "alt": "VID 20251221 WA0031",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0010.jpg",
+      "alt": "IMG 20251221 WA0010",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 33,
-      "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0032.mp4",
-      "alt": "VID 20251221 WA0032",
-      "category": "gallery"
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0011.jpg",
+      "alt": "IMG 20251221 WA0011",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 34,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0033.mp4",
-      "alt": "VID 20251221 WA0033",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0000.mp4",
+      "alt": "VID 20251221 WA0000",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 35,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0034.mp4",
-      "alt": "VID 20251221 WA0034",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0002.mp4",
+      "alt": "VID 20251221 WA0002",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 36,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0035.mp4",
-      "alt": "VID 20251221 WA0035",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0003.mp4",
+      "alt": "VID 20251221 WA0003",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 37,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0036.mp4",
-      "alt": "VID 20251221 WA0036",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0004.mp4",
+      "alt": "VID 20251221 WA0004",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 38,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0037.mp4",
-      "alt": "VID 20251221 WA0037",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0005.mp4",
+      "alt": "VID 20251221 WA0005",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 39,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0038.mp4",
-      "alt": "VID 20251221 WA0038",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0013.mp4",
+      "alt": "VID 20251221 WA0013",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 40,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0039.mp4",
-      "alt": "VID 20251221 WA0039",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0014.mp4",
+      "alt": "VID 20251221 WA0014",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:26.000Z"
     },
     {
       "id": 41,
       "type": "video",
-      "src": "/assets/img/image-gallery/VID-20251221-WA0040.mp4",
-      "alt": "VID 20251221 WA0040",
-      "category": "gallery"
+      "src": "/assets/img/image-gallery/VID-20251221-WA0015.mp4",
+      "alt": "VID 20251221 WA0015",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
     },
     {
       "id": 42,
-      "type": "image",
-      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.08 PM.jpeg",
-      "alt": "WhatsApp Image 2025 12 21 at 3.22.08 PM",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0016.mp4",
+      "alt": "VID 20251221 WA0016",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
     },
     {
       "id": 43,
-      "type": "image",
-      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.09 PM (1).jpeg",
-      "alt": "WhatsApp Image 2025 12 21 at 3.22.09 PM (1)",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0017.mp4",
+      "alt": "VID 20251221 WA0017",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
     },
     {
       "id": 44,
-      "type": "image",
-      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.09 PM (2).jpeg",
-      "alt": "WhatsApp Image 2025 12 21 at 3.22.09 PM (2)",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0018.mp4",
+      "alt": "VID 20251221 WA0018",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
     },
     {
       "id": 45,
-      "type": "image",
-      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.09 PM.jpeg",
-      "alt": "WhatsApp Image 2025 12 21 at 3.22.09 PM",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0019.mp4",
+      "alt": "VID 20251221 WA0019",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
     },
     {
       "id": 46,
-      "type": "image",
-      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.10 PM.jpeg",
-      "alt": "WhatsApp Image 2025 12 21 at 3.22.10 PM",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0020.mp4",
+      "alt": "VID 20251221 WA0020",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
     },
     {
       "id": 47,
-      "type": "image",
-      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.23.32 PM (1).jpeg",
-      "alt": "WhatsApp Image 2025 12 21 at 3.23.32 PM (1)",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0021.mp4",
+      "alt": "VID 20251221 WA0021",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
     },
     {
       "id": 48,
-      "type": "image",
-      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.43.27 PM.jpeg",
-      "alt": "WhatsApp Image 2025 12 21 at 3.43.27 PM",
-      "category": "gallery"
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0022.mp4",
+      "alt": "VID 20251221 WA0022",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
     },
     {
       "id": 49,
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0023.mp4",
+      "alt": "VID 20251221 WA0023",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
+    },
+    {
+      "id": 50,
+      "type": "video",
+      "src": "/assets/img/image-gallery/VID-20251221-WA0024.mp4",
+      "alt": "VID 20251221 WA0024",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:25.000Z"
+    },
+    {
+      "id": 51,
+      "type": "image",
+      "src": "/assets/img/image-gallery/IMG-20251221-WA0025.jpg",
+      "alt": "IMG 20251221 WA0025",
+      "category": "gallery",
+      "dateAdded": "2025-12-23T13:36:24.000Z"
+    },
+    {
+      "id": 52,
+      "type": "image",
+      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.23.32 PM (1).jpeg",
+      "alt": "WhatsApp Image 2025 12 21 at 3.23.32 PM (1)",
+      "category": "gallery",
+      "dateAdded": "2025-12-22T10:07:10.551Z"
+    },
+    {
+      "id": 53,
+      "type": "image",
+      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.10 PM.jpeg",
+      "alt": "WhatsApp Image 2025 12 21 at 3.22.10 PM",
+      "category": "gallery",
+      "dateAdded": "2025-12-22T10:06:46.240Z"
+    },
+    {
+      "id": 54,
+      "type": "image",
+      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.09 PM (2).jpeg",
+      "alt": "WhatsApp Image 2025 12 21 at 3.22.09 PM (2)",
+      "category": "gallery",
+      "dateAdded": "2025-12-22T10:06:41.135Z"
+    },
+    {
+      "id": 55,
+      "type": "image",
+      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.09 PM (1).jpeg",
+      "alt": "WhatsApp Image 2025 12 21 at 3.22.09 PM (1)",
+      "category": "gallery",
+      "dateAdded": "2025-12-22T10:06:37.637Z"
+    },
+    {
+      "id": 56,
+      "type": "image",
+      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.09 PM.jpeg",
+      "alt": "WhatsApp Image 2025 12 21 at 3.22.09 PM",
+      "category": "gallery",
+      "dateAdded": "2025-12-22T10:06:34.292Z"
+    },
+    {
+      "id": 57,
+      "type": "image",
+      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.22.08 PM.jpeg",
+      "alt": "WhatsApp Image 2025 12 21 at 3.22.08 PM",
+      "category": "gallery",
+      "dateAdded": "2025-12-22T10:06:23.058Z"
+    },
+    {
+      "id": 58,
       "type": "image",
       "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.43.28 PM.jpeg",
       "alt": "WhatsApp Image 2025 12 21 at 3.43.28 PM",
-      "category": "gallery"
+      "category": "gallery",
+      "dateAdded": "2025-12-22T10:05:08.789Z"
+    },
+    {
+      "id": 59,
+      "type": "image",
+      "src": "/assets/img/image-gallery/WhatsApp Image 2025-12-21 at 3.43.27 PM.jpeg",
+      "alt": "WhatsApp Image 2025 12 21 at 3.43.27 PM",
+      "category": "gallery",
+      "dateAdded": "2025-12-22T10:05:03.175Z"
     }
   ]
 }
