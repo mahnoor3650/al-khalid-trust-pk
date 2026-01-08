@@ -96,9 +96,37 @@ const Gallery = () => {
     loadGalleryManifest();
   }, []);
 
-  const filteredItems = filter === 'all' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.type === filter);
+  // Group items by date
+  const groupedByDate = galleryItems.reduce((groups, item) => {
+    const dateKey = item.dateGroup || 'older';
+    if (!groups[dateKey]) {
+      groups[dateKey] = {
+        label: item.dateLabel || 'Older',
+        items: []
+      };
+    }
+    groups[dateKey].items.push(item);
+    return groups;
+  }, {});
+
+  // Sort date groups (newest first) and filter items
+  const sortedDateGroups = Object.keys(groupedByDate)
+    .sort((a, b) => {
+      // Find the first item in each group to compare dates
+      const itemA = groupedByDate[a].items[0];
+      const itemB = groupedByDate[b].items[0];
+      const dateA = itemA?.dateAdded ? new Date(itemA.dateAdded) : new Date(0);
+      const dateB = itemB?.dateAdded ? new Date(itemB.dateAdded) : new Date(0);
+      return dateB - dateA; // Newest first
+    })
+    .map(dateKey => ({
+      dateKey,
+      label: groupedByDate[dateKey].label,
+      items: filter === 'all' 
+        ? groupedByDate[dateKey].items 
+        : groupedByDate[dateKey].items.filter(item => item.type === filter)
+    }))
+    .filter(group => group.items.length > 0); // Only show groups with items after filtering
 
   const openLightbox = (item) => {
     setSelectedMedia(item);
@@ -180,51 +208,69 @@ const Gallery = () => {
           </div>
           )}
 
-          {/* Masonry Gallery Grid - Responsive CSS Columns masonry layout */}
+          {/* Masonry Gallery Grid - Grouped by Date */}
           {!loading && (
             <>
-              {filteredItems.length > 0 ? (
-                <div className="gallery-masonry">
-                  {filteredItems.map((item) => (
-                    <div
-                      key={item.id}
-                      className="gallery-item cursor-pointer group mb-5 break-inside-avoid"
-                      onClick={() => openLightbox(item)}
-                    >
-                      <div className="relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02]">
-                        {item.type === 'image' ? (
-                          <img
-                            src={item.src}
-                            alt={item.alt}
-                            className="w-full h-auto object-cover"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <div className="relative">
-                            <VideoThumbnail src={item.src} alt={item.alt} />
-                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center pointer-events-none">
-                              <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                                <i className="fas fa-play text-theme-primary text-2xl ml-1"></i>
+              {sortedDateGroups.length > 0 ? (
+                <div className="space-y-12">
+                  {sortedDateGroups.map((dateGroup) => (
+                    <div key={dateGroup.dateKey} className="date-group">
+                      {/* Date Header */}
+                      <div className="mb-6 pb-3 border-b-2 border-theme-primary/30">
+                        <h3 className="text-2xl font-bold text-heading flex items-center gap-2">
+                          <i className="fas fa-calendar-alt text-theme-primary"></i>
+                          {dateGroup.label}
+                        </h3>
+                        <p className="text-sm text-body mt-1">
+                          {dateGroup.items.length} {dateGroup.items.length === 1 ? 'item' : 'items'}
+                        </p>
+                      </div>
+                      
+                      {/* Gallery Items for this date */}
+                      <div className="gallery-masonry">
+                        {dateGroup.items.map((item) => (
+                          <div
+                            key={item.id}
+                            className="gallery-item cursor-pointer group mb-5 break-inside-avoid"
+                            onClick={() => openLightbox(item)}
+                          >
+                            <div className="relative overflow-hidden rounded-lg shadow-md hover:shadow-2xl transition-all duration-300 group-hover:scale-[1.02]">
+                              {item.type === 'image' ? (
+                                <img
+                                  src={item.src}
+                                  alt={item.alt}
+                                  className="w-full h-auto object-cover"
+                                  loading="lazy"
+                                />
+                              ) : (
+                                <div className="relative">
+                                  <VideoThumbnail src={item.src} alt={item.alt} />
+                                  <div className="absolute inset-0 bg-black/30 flex items-center justify-center pointer-events-none">
+                                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                                      <i className="fas fa-play text-theme-primary text-2xl ml-1"></i>
+                                    </div>
+                                  </div>
+                                </div>
+                              )}
+                              {/* Overlay on hover */}
+                              <div 
+                                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                style={{ background: "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)" }}
+                              >
+                                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
+                                  <div className="flex items-center gap-2">
+                                    {item.type === 'image' ? (
+                                      <i className="fas fa-image"></i>
+                                    ) : (
+                                      <i className="fas fa-video"></i>
+                                    )}
+                                    <span className="text-sm font-semibold">Click to view</span>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                        )}
-                        {/* Overlay on hover */}
-                        <div 
-                          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                          style={{ background: "linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent)" }}
-                        >
-                          <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                            <div className="flex items-center gap-2">
-                              {item.type === 'image' ? (
-                                <i className="fas fa-image"></i>
-                              ) : (
-                                <i className="fas fa-video"></i>
-                              )}
-                              <span className="text-sm font-semibold">Click to view</span>
-                            </div>
-                          </div>
-                        </div>
+                        ))}
                       </div>
                     </div>
                   ))}

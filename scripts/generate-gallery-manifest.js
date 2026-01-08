@@ -14,57 +14,135 @@ const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
 // Supported video formats
 const videoExtensions = ['.mp4', '.webm', '.mov', '.avi'];
 
-function getFilesFromFolder(folderPath) {
-  try {
-    const files = fs.readdirSync(folderPath);
-    return files.filter(file => {
-      const ext = path.extname(file).toLowerCase();
-      return imageExtensions.includes(ext) || videoExtensions.includes(ext);
-    });
-  } catch (error) {
-    console.error('Error reading gallery folder:', error);
-    return [];
+// Parse date from folder name (e.g., "29-12-2025" or "8-1-2026")
+function parseDateFromFolder(folderName) {
+  if (folderName.toLowerCase() === 'older') {
+    return { date: new Date(0), label: 'Older' }; // Very old date for sorting
   }
+  
+  // Try to parse date formats like "29-12-2025" or "8-1-2026"
+  const parts = folderName.split('-');
+  if (parts.length === 3) {
+    const day = parseInt(parts[0], 10);
+    const month = parseInt(parts[1], 10) - 1; // Month is 0-indexed
+    const year = parseInt(parts[2], 10);
+    
+    if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+      const date = new Date(year, month, day);
+      if (!isNaN(date.getTime())) {
+        // Format date label nicely
+        const formattedDate = date.toLocaleDateString('en-GB', { 
+          day: 'numeric', 
+          month: 'long', 
+          year: 'numeric' 
+        });
+        return { date, label: formattedDate };
+      }
+    }
+  }
+  
+  // Fallback: use folder name as label
+  return { date: new Date(0), label: folderName };
+}
+
+function getFilesFromFolder(folderPath, subfolder = '') {
+  const items = [];
+  
+  try {
+    const entries = fs.readdirSync(folderPath, { withFileTypes: true });
+    
+    for (const entry of entries) {
+      const fullPath = path.join(folderPath, entry.name);
+      
+      if (entry.isDirectory()) {
+        // Recursively scan subfolders
+        const subfolderItems = getFilesFromFolder(fullPath, entry.name);
+        items.push(...subfolderItems);
+      } else if (entry.isFile()) {
+        const ext = path.extname(entry.name).toLowerCase();
+        if (imageExtensions.includes(ext) || videoExtensions.includes(ext)) {
+          items.push({
+            file: entry.name,
+            folder: subfolder,
+            path: fullPath
+          });
+        }
+      }
+    }
+  } catch (error) {
+    console.error(`Error reading folder ${folderPath}:`, error);
+  }
+  
+  return items;
 }
 
 function generateManifest() {
-  const files = getFilesFromFolder(galleryFolder);
+  const fileEntries = getFilesFromFolder(galleryFolder);
   
-  const galleryItems = files.map((file, index) => {
-    const ext = path.extname(file).toLowerCase();
+  // Group items by folder/date
+  const itemsByDate = {};
+  
+  fileEntries.forEach((entry, index) => {
+    const ext = path.extname(entry.file).toLowerCase();
     const isImage = imageExtensions.includes(ext);
     const isVideo = videoExtensions.includes(ext);
-    const filePath = path.join(galleryFolder, file);
     
-    // Get file modification date (when file was last modified/added)
-    let dateAdded = new Date().toISOString();
-    try {
-      const stats = fs.statSync(filePath);
-      dateAdded = stats.mtime.toISOString(); // Use modification time
-    } catch (error) {
-      console.warn(`Could not get stats for ${file}:`, error.message);
+    // Get date info from folder name
+    const dateInfo = parseDateFromFolder(entry.folder || 'older');
+    const dateKey = entry.folder || 'older';
+    
+    if (!itemsByDate[dateKey]) {
+      itemsByDate[dateKey] = {
+        dateInfo,
+        items: []
+      };
     }
     
-    return {
+    // Get file modification date
+    let dateAdded = new Date().toISOString();
+    try {
+      const stats = fs.statSync(entry.path);
+      dateAdded = stats.mtime.toISOString();
+    } catch (error) {
+      console.warn(`Could not get stats for ${entry.file}:`, error.message);
+    }
+    
+    itemsByDate[dateKey].items.push({
       id: index + 1,
       type: isImage ? 'image' : isVideo ? 'video' : 'unknown',
-      src: `/assets/img/image-gallery/${file}`,
-      alt: file.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' '),
+      src: `/assets/img/image-gallery/${entry.folder ? entry.folder + '/' : ''}${entry.file}`,
+      alt: entry.file.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' '),
       category: 'gallery',
-      dateAdded: dateAdded
-    };
+      dateAdded: dateAdded,
+      dateGroup: dateKey,
+      dateLabel: dateInfo.label
+    });
   });
-
-  // Sort by date (newest first - most recent modification date first)
-  galleryItems.sort((a, b) => {
-    const dateA = new Date(a.dateAdded);
-    const dateB = new Date(b.dateAdded);
+  
+  // Sort date groups by date (newest first)
+  const sortedDateKeys = Object.keys(itemsByDate).sort((a, b) => {
+    const dateA = itemsByDate[a].dateInfo.date;
+    const dateB = itemsByDate[b].dateInfo.date;
     return dateB - dateA; // Descending order (newest first)
   });
-
-  // Update IDs after sorting
-  galleryItems.forEach((item, index) => {
-    item.id = index + 1;
+  
+  // Flatten items maintaining date group order
+  const galleryItems = [];
+  let idCounter = 1;
+  
+  sortedDateKeys.forEach(dateKey => {
+    const group = itemsByDate[dateKey];
+    // Sort items within each date group by modification date (newest first)
+    group.items.sort((a, b) => {
+      const dateA = new Date(a.dateAdded);
+      const dateB = new Date(b.dateAdded);
+      return dateB - dateA;
+    });
+    
+    group.items.forEach(item => {
+      item.id = idCounter++;
+      galleryItems.push(item);
+    });
   });
 
   const manifest = {
