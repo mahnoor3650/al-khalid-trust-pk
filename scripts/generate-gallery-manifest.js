@@ -115,7 +115,8 @@ function generateManifest() {
       category: 'gallery',
       dateAdded: dateAdded,
       dateGroup: dateKey,
-      dateLabel: dateInfo.label
+      dateLabel: dateInfo.label,
+      dateValue: dateInfo.date.toISOString() // Store the actual date for sorting
     });
   });
   

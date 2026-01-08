@@ -102,6 +102,7 @@ const Gallery = () => {
     if (!groups[dateKey]) {
       groups[dateKey] = {
         label: item.dateLabel || 'Older',
+        dateValue: item.dateValue || new Date(0).toISOString(), // Use the actual date from folder
         items: []
       };
     }
@@ -112,12 +113,10 @@ const Gallery = () => {
   // Sort date groups (newest first) and filter items
   const sortedDateGroups = Object.keys(groupedByDate)
     .sort((a, b) => {
-      // Find the first item in each group to compare dates
-      const itemA = groupedByDate[a].items[0];
-      const itemB = groupedByDate[b].items[0];
-      const dateA = itemA?.dateAdded ? new Date(itemA.dateAdded) : new Date(0);
-      const dateB = itemB?.dateAdded ? new Date(itemB.dateAdded) : new Date(0);
-      return dateB - dateA; // Newest first
+      // Use the actual date value from the folder name, not file modification time
+      const dateA = new Date(groupedByDate[a].dateValue || 0);
+      const dateB = new Date(groupedByDate[b].dateValue || 0);
+      return dateB - dateA; // Descending order (newest first)
     })
     .map(dateKey => ({
       dateKey,
