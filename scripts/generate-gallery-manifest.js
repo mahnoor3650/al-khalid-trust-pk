@@ -4,12 +4,10 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
 // Paths
 const galleryFolder = path.join(__dirname, '../public/assets/img/image-gallery');
 const manifestPath = path.join(__dirname, '../public/gallery-manifest.json');
 
-// Supported image formats
 const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp'];
 // Supported video formats
 const videoExtensions = ['.mp4', '.webm', '.mov', '.avi'];
