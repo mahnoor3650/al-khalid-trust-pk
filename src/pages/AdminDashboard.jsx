@@ -133,11 +133,11 @@ const AdminDashboard = () => {
       <SEO title="Admin Dashboard | Al-Khalid Trust Pakistan" />
       <section className="section-padding30 bg-gray-50 min-h-[70vh]">
         <div className="container-custom">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 sm:mb-8">
+          <div className="flex items-center justify-between gap-3 mb-6 sm:mb-8">
             <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-heading">
               Gallery Admin
             </h1>
-            <button onClick={handleLogout} className="btn btn-secondary w-full sm:w-auto">
+            <button onClick={handleLogout} className="text-sm text-body hover:text-theme-primary transition underline">
               Log Out
             </button>
           </div>
