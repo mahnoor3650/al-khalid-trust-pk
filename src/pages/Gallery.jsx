@@ -1,5 +1,30 @@
 import { useState, useEffect, useRef } from 'react';
 import SEO from '../components/SEO';
+import { supabase, GALLERY_TABLE } from '../lib/supabaseClient';
+
+const formatDateGroup = (isoString) => {
+  const date = new Date(isoString);
+  return date.toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+};
+
+const mapSupabaseItem = (row) => {
+  const label = formatDateGroup(row.created_at);
+  return {
+    id: `admin-${row.id}`,
+    type: row.type,
+    src: row.url,
+    alt: row.alt,
+    category: 'gallery',
+    dateAdded: row.created_at,
+    dateGroup: label,
+    dateLabel: label,
+    dateValue: row.created_at,
+  };
+};
 
 // Video Thumbnail Component - Shows video first frame as thumbnail
 const VideoThumbnail = ({ src, alt }) => {
@@ -64,36 +89,52 @@ const Gallery = () => {
   const [galleryItems, setGalleryItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Load gallery items from manifest file
+  // Load gallery items from the build-time manifest and admin-uploaded media
   useEffect(() => {
-    const loadGalleryManifest = async () => {
+    const loadGallery = async () => {
+      let manifestItems = [];
       try {
         const response = await fetch('/gallery-manifest.json');
         if (response.ok) {
           const manifest = await response.json();
-          let items = manifest.items || [];
-          
-          // Sort by date (newest first) - fallback in case manifest wasn't sorted
-          items.sort((a, b) => {
-            const dateA = a.dateAdded ? new Date(a.dateAdded) : new Date(0);
-            const dateB = b.dateAdded ? new Date(b.dateAdded) : new Date(0);
-            return dateB - dateA; // Descending order (newest first)
-          });
-          
-          setGalleryItems(items);
+          manifestItems = manifest.items || [];
         } else {
           console.warn('Gallery manifest not found. Run: npm run generate-gallery');
-          setGalleryItems([]);
         }
       } catch (error) {
         console.error('Error loading gallery manifest:', error);
-        setGalleryItems([]);
-      } finally {
-        setLoading(false);
       }
+
+      let adminItems = [];
+      try {
+        const { data, error } = await supabase
+          .from(GALLERY_TABLE)
+          .select('*')
+          .order('created_at', { ascending: false });
+
+        if (error) {
+          console.error('Error loading admin-uploaded media:', error.message);
+        } else {
+          adminItems = (data || []).map(mapSupabaseItem);
+        }
+      } catch (error) {
+        console.error('Error loading admin-uploaded media:', error);
+      }
+
+      const items = [...adminItems, ...manifestItems];
+
+      // Sort by date (newest first)
+      items.sort((a, b) => {
+        const dateA = a.dateAdded ? new Date(a.dateAdded) : new Date(0);
+        const dateB = b.dateAdded ? new Date(b.dateAdded) : new Date(0);
+        return dateB - dateA;
+      });
+
+      setGalleryItems(items);
+      setLoading(false);
     };
 
-    loadGalleryManifest();
+    loadGallery();
   }, []);
 
   // Group items by date
